@@ -1,16 +1,19 @@
 import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import { movieAction } from '../redux/actions/MovieAction'
+import { useDispatch, useSelector } from 'react-redux'
+import Banner from '../component/Banner'
+import { movieAction } from '../redux/actions/movieAction'
 
 const Home = () => {
-  const dispatch =  useDispatch()
+  const dispatch = useDispatch()
+  const { popularMovies, topRatedMovies, upComingMovies } = useSelector(state => state.movie)
+
   useEffect(() => {
-  dispatch(movieAction.getMovies())
-},[])
+    dispatch(movieAction.getMovies())
+  }, [])
 
   return (
     <div>
-      Home
+      {popularMovies.results && <Banner movie={popularMovies.results[0]} />}
     </div>
   )
 }
