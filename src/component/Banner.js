@@ -1,12 +1,20 @@
 import React from 'react'
+import homeBanner from '../big-banner.jpg'
 
-const Banner = ({ movie }) => {
-  console.log(movie)
+const Banner = () => {
   return (
-    <div className='banner' style={{ backgroundImage: "url(" + `https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces${movie.poster_path}` + ")" }}>
-      <div className='banner-info'>
-        <h1 className='white-font'>{movie.title}</h1>
-        <p className='white-font'>{movie.overview}</p>
+    <div className='banner'>
+      <img
+        src={ homeBanner }
+        className="home-banner"
+      />
+      <div className="banner-content">
+        <h1>American Horror Story</h1>
+        <span>
+          An anthology of stories consisting of a house with a deadly secret, a
+          demented asylum, <br></br>a witch coven, an unusual show, a hotel,
+          <br></br>a haunted farmhouse, a cult and an apocalypse.
+        </span>
       </div>
     </div>
   )

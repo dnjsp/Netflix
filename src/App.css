@@ -1,3 +1,8 @@
+#root{
+  background-color: #000 !important;
+  color: #fff;
+}
+
 .nav-item {
   color: #fff;
   text-decoration: none;
@@ -31,4 +36,20 @@
 
 .white-font {
   color: #fff;
+}
+
+.card {
+  width: 300px;
+  height: 200px !important;
+}
+
+.overlay{
+  opacity: 0;
+  width: 100%;
+  background: rgba(43, 41, 41, .9);
+  height: 100%;
+}
+
+.card:hover .overlay{
+  opacity: 1;
 }
