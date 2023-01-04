@@ -1,13 +1,8 @@
 import React from 'react'
-import homeBanner from '../big-banner.jpg'
 
 const Banner = () => {
   return (
-    <div className='banner'>
-      <img
-        src={ homeBanner }
-        className="home-banner"
-      />
+    <div className='banner' style={{ backgroundImage: "url('./big-banner.jpg')" }}>
       <div className="banner-content">
         <h1>American Horror Story</h1>
         <span>
